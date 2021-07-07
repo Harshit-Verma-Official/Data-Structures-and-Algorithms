@@ -74,3 +74,6 @@ int main(){
 // 6
 // 4 5
 // 1 1
+
+// Time Complexity: O(N2).
+// Auxiliary Space: O(N2).
