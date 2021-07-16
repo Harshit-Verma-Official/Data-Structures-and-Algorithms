@@ -57,6 +57,9 @@ int main() {
 	return 0;
 }
 
+// Time : O(NlogN)
+// Space : O(1)
+
 // Test case : 
 // 1
 // 6 4
