@@ -1,32 +1,36 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define ll long long
+void eraseSubStr(std::string & mainStr, const std::string & toErase)
+{
+    // Search for the substring in string
+    size_t pos = mainStr.find(toErase);
+
+    if (pos != std::string::npos)
+    {
+        // If found then erase it from string
+        mainStr.erase(pos, toErase.length());
+    }
+}
 
 int main() {
-	ll t;
-	cin >> t;
+	string str = "apple5abc11d";
+    int n = str.length();
 
-	while (t--) {
-		ll n;
-		cin >> n;
+    int i = 1;
+    while (true) {
+        if (n <= 10 * i) {
+            n--;
+            break;
+        }
+        i++;
+    }
 
-		vector<ll> arr(n);
-		ll mn = INT_MAX;
+    string len = to_string(n);
 
-		for (int i = 0; i < n; ++i) {
-			cin >> arr[i];
-			mn = min(mn, arr[i]);
-		}
 
-		ll orr = 0;
-		for (int i = 0; i < n; ++i) {
-			arr[i] ^= mn;
-			orr |= arr[i];
-		}
+    eraseSubStr(str, len);
 
-		cout << mn << " " << orr << "\n";
-	}
+    cout << str;
 
-	return 0;
 }
