@@ -43,3 +43,12 @@ int main()
     }
     return 0; 
 } 
+
+// Time Complexity: O(N*sum of elements)
+// Auxiliary Space: O(N*sum of elements)
+
+// Test Case : 
+// 1
+// 10
+// 1 1 2 2 3 4 5 5 6 7
+// 1
